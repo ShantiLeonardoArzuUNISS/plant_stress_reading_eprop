@@ -22,8 +22,8 @@ INSTALLATION
 ================================================================================
 
 1. Clone the repository:
-   git clone https://github.com/[your-username]/plant_stress_reading.git
-   cd plant_stress_reading
+   git clone https://github.com/[your-username]/plant_stress_reading_eprop.git
+   cd plant_stress_reading_eprop
 
 2. Create virtual environment (local to project folder):
    python -m venv venv          # Windows, macOS, Linux
