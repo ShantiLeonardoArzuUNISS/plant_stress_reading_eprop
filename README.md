@@ -1,58 +1,61 @@
-# Plant Stress Reading - Spiking Neural Networks
+Plant Stress Reading - Spiking Neural Networks
 
-Detection of water stress and iron deficiency in tomato plants using spiking neural networks (SRNN)
+Detection of water stress and iron deficiency in tomato plants using spiking neural
+networks (SRNN) with transfer learning from Braille letter recognition networks.
 
 ================================================================================
 PROJECT DESCRIPTION
 ================================================================================
 
-This project adapts a recurrent spiking neural network (SRNN) with CUBA LIF neurons for the analysis of bioimpedance data from tomato plants under stress conditions.
+This project adapts a recurrent spiking neural network (SRNN) with CUBA LIF neurons
+for analyzing bioimpedance data from tomato plants under stress conditions.
 
 ================================================================================
-SYSTEM REQUIREMENTS
+REQUIREMENTS
 ================================================================================
 
 - Python 3.8+
 - pip
 
 ================================================================================
-QUICK INSTALLATION
+INSTALLATION
 ================================================================================
 
-1. CLONE THE REPOSITORY
-----------------------
-git clone https://github.com/[your-username]/plant_stress_reading.git
-cd plant_stress_reading
+1. Clone the repository:
+   git clone https://github.com/[your-username]/plant_stress_reading.git
+   cd plant_stress_reading
 
+2. Create virtual environment (local to project folder):
+   python -m venv venv          # Windows, macOS, Linux
 
-2. CREATE THE VIRTUAL ENVIRONMENT
----------------------------------
+3. Activate virtual environment:
 
-Windows:
-    python -m venv venv
-    venv\Scriptsctivate
+   Windows:
+       venv\Scriptsactivate
 
-macOS / Linux:
-    python3 -m venv venv
-    source venv/bin/activate
+   macOS / Linux:
+       source venv/bin/activate
 
-
-3. INSTALL DEPENDENCIES
-----------------------
-pip install --upgrade pip
-pip install -r requirements.txt
-
+4. Install dependencies:
+   pip install --upgrade pip
+   pip install -r requirements.txt
 
 ================================================================================
-PROJECT STRUCTURE
+USING THE VIRTUAL ENVIRONMENT
 ================================================================================
 
-plant_stress_reading/
-├── scripts/              # Training and testing scripts
-├── utils/               # Utility functions
-├── data/                # Dataset folder (empty)
-├── figures_plants/      # Generated plots
-├── plots/               # Visual results
-├── .gitignore           # Files to exclude from git
-├── requirements.txt     # Python dependencies
-└── README.md            # This file
+ACTIVATE (run this every time you start working):
+
+   Windows:
+       venv\Scriptsactivate
+
+   macOS / Linux:
+       source venv/bin/activate
+
+DEACTIVATE (run when finished working):
+   deactivate
+
+CHECK IF ACTIVE:
+   The prompt will show (venv) at the beginning if environment is active.
+
+==============================================
