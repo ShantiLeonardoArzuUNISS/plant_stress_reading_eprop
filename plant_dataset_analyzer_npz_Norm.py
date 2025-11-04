@@ -131,8 +131,6 @@ def normalize_zscore(X):
 def plot_normalization_comparison(X_original, X_normalized, y):
     """
     Confronta visivamente dati normalizzati vs non normalizzati
-    ELIMINATO: plot_normalization_effects (varianze e tabella statistiche)
-    MANTENUTO: plot_distribution_comparison e plot_class_separation_comparison
     """
     print("\n=== GRUPPO 5: CONFRONTO NORMALIZZAZIONE ===")
     print("Generazione confronto dati originali vs normalizzati...")
@@ -960,7 +958,7 @@ def plot_individual_samples(X, y, plant_ids):
 def main():
     print("\n" + "=" * 60)
     print(" ANALISI DATASET PIANTE - STRESS DETECTION")
-    print(" VERSIONE CON NORMALIZZAZIONE Z-SCORE")
+    print(" CON NORMALIZZAZIONE Z-SCORE")
     print("=" * 60)
 
     # Input configurazione
@@ -999,7 +997,7 @@ def main():
         print(
             f"\nERRORE: File ./data/{STRESS_TYPE.capitalize()}_Stress.npz non trovato!"
         )
-        print("   Assicurati che il file sia nella cartella ./data/")
+        print("   Verificare che il file sia nella cartella ./data/")
         return
 
     # Stampa statistiche originali
