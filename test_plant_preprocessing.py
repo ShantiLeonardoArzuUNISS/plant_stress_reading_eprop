@@ -3,7 +3,7 @@ test_plant_data_preprocessing.py
 
 Script di test per verificare il funzionamento della classe PlantFeatureSelector.
 
-Questo script testa le funzionalità principali di plant_data_preprocessing.py:
+Testa le funzionalità principali di plant_data_preprocessing.py:
 - Selezione frequenze (water, iron, custom)
 - Conversione Flattened → Shaped
 - Riduzione features
