@@ -14,7 +14,7 @@ import numpy as np
 
 # Carica il file
 stress_type = input("Quale stress? (iron/water): ").strip().lower()
-file_path = Path(f"./data/{stress_type.capitalize()}_Stress.npz")
+file_path = Path(f"../data/{stress_type.capitalize()}_Stress.npz")
 
 if not file_path.exists():
     print(f"File non trovato: {file_path}")

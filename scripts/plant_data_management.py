@@ -79,7 +79,7 @@ class PlantDataManager:
         # Step 2: Feature selection
         print("\n[1/5] Feature Selection...")
         X_selected = self.feature_selector.select_features(X)
-        print(f"  Features reduced: {X.shape} → {X_selected.shape}")
+        print(f"  Features reduced: {X.shape} â†’ {X_selected.shape}")
 
         # Step 3: Split dataset
         print("\n[2/5] Splitting dataset...")
@@ -109,7 +109,7 @@ class PlantDataManager:
         # Step 5: Temporal encoding
         print("\n[4/5] Temporal encoding...")
 
-        # Flatten per encoding: (n, nb_freqs, 2) → (n, nb_freqs*2)
+        # Flatten per encoding: (n, nb_freqs, 2) â†’ (n, nb_freqs*2)
         X_train_flat = X_train_norm.reshape(X_train_norm.shape[0], -1)
         X_val_flat = X_val_norm.reshape(X_val_norm.shape[0], -1)
         X_test_flat = X_test_norm.reshape(X_test_norm.shape[0], -1)
@@ -141,7 +141,7 @@ class PlantDataManager:
             "split_sizes": {"train": train_size, "val": val_size, "test": test_size},
         }
 
-        print("\n✓ Standard split dataset preparation complete!")
+        print("\nâœ“ Standard split dataset preparation complete!")
 
         return ds_train, ds_val, ds_test, metadata
 
@@ -167,7 +167,7 @@ class PlantDataManager:
         # Step 2: Feature selection
         print("\n[1/6] Feature Selection...")
         X_selected = self.feature_selector.select_features(X)
-        print(f"  Features reduced: {X.shape} → {X_selected.shape}")
+        print(f"  Features reduced: {X.shape} â†’ {X_selected.shape}")
 
         # Step 3: Split per pianta
         print(f"\n[2/6] Splitting by plant (leaving out {leave_plant})...")
@@ -250,7 +250,7 @@ class PlantDataManager:
             "val_test_split": {"val_size": val_size, "test_size": test_size},
         }
 
-        print("\n✓ Leave-One-Plant-Out dataset preparation complete!")
+        print("\nâœ“ Leave-One-Plant-Out dataset preparation complete!")
         print(
             f"   Strategy: Training on {metadata['train_plants']}, Testing on {leave_plant}"
         )

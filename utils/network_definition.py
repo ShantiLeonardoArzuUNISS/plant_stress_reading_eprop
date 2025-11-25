@@ -6,6 +6,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.utils.data import DataLoader
 from tqdm import tqdm
+
 from utils.neuron_models import (
     CuBaLIF_HW_Aware,
     CuBaLIF_HW_Aware_OG,
@@ -14,7 +15,7 @@ from utils.neuron_models import (
     STEFunction,
 )
 
-ste_fn = STEFunction.apply
+# ste_fn = STEFunction.apply()
 
 
 class SRNN:
@@ -855,19 +856,11 @@ class SRNN_OG:
 
         self.data_steps = self.max_time // self.time_bin_size
         if self.eprop:
-            weight_file = "test_init_weight.pkl"
-        else:
-            weight_file = "test_init_weight_bptt.pkl"
-        
-        # FIX: Rendi caricamento pesi opzionale
-        import os
-        if os.path.exists(weight_file):
-            print(f"✓ Caricamento pesi da: {weight_file}")
-            with open(weight_file, "rb") as f:
+            with open("test_init_weight.pkl", "rb") as f:
                 layers = pickle.load(f)
         else:
-            print(f"⚠ Pesi non trovati ({weight_file}), inizializzazione casuale")
-            layers = [None, None, None]
+            with open("test_init_weight_bptt.pkl", "rb") as f:
+                layers = pickle.load(f)
 
         self.ff_layer = CuBaLIF_HW_Aware_OG(
             batch_size=self.batch_size,

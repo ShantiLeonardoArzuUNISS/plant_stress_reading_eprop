@@ -1,5 +1,5 @@
 """
-test_pipeline.py
+test_plant_data_management.py
 Test end-to-end della pipeline di preprocessing
 """
 

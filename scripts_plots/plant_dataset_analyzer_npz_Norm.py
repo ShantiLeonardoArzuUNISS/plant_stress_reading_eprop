@@ -47,7 +47,7 @@ FIGSIZE_NORMALIZATION = (24, 14)  # Per confronto normalizzazione
 
 def load_dataset(stress_type):
     """Carica il dataset NPZ"""
-    file_path = f"./data/{stress_type.capitalize()}_Stress.npz"
+    file_path = f"../data/{stress_type.capitalize()}_Stress.npz"
     data = np.load(file_path, allow_pickle=True)
 
     X = data["X"]  # Features (n_samples, 400)
